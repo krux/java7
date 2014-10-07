@@ -11,7 +11,7 @@ NAME=oracle-java-7
 
 ### Packaging info
 PACKAGE_NAME=$NAME
-PACKAGE_VERSION="1.7.0-67"
+PACKAGE_VERSION=1.7.0-67~krux$( date -u +%Y%m%d%H%M )
 
 ### Where this package will be installed
 DEST_DIR="/usr/local/${NAME}/"
