@@ -19,4 +19,4 @@ DEST_DIR="/usr/local/${NAME}/"
 ### Where the sources live
 SOURCE_DIR="${MY_DIR}/jdk1.7.0_67"
 
-/usr/local/bin/fpm -s dir -t deb -n $NAME -a all -v $PACKAGE_VERSION --after-install createSymLinks.sh --after-remove removeSymLinks.sh --prefix $DEST_DIR -C $SOURCE_DIR .
+/usr/local/bin/fpm -s dir -t deb -n $NAME -a all -v $PACKAGE_VERSION --post-install createSymLinks.sh --post-uninstall removeSymLinks.sh --prefix $DEST_DIR -C $SOURCE_DIR .
